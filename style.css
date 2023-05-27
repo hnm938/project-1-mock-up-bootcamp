@@ -64,6 +64,7 @@ button:hover, input[type=text]:hover {
   align-items: center;
   justify-content: center;
   gap: 15px 10px;
+  white-space: nowrap;
 }
 #drink-search-container label {
   width: 50%;
@@ -206,4 +207,103 @@ button:hover, input[type=text]:hover {
 }
 #drink-list hr {
   margin: 50px 0;
+}
+
+#recpie-modal--container {
+  width: 750px;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 90%;
+  min-height: 500px;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  border: solid black 1px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+#recpie-modal--container #recipe-grid {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr fit-content;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  gap: 10px 0;
+}
+#recpie-modal--container #recipe-grid #recipe--ingredients {
+  grid-row: 1;
+  grid-column: 1;
+}
+#recpie-modal--container #recipe-grid #recipe--about {
+  height: -moz-min-content;
+  height: min-content;
+  grid-row: 2;
+  grid-column: 1;
+}
+#recpie-modal--container #recipe-grid #recipe--tags {
+  height: -moz-min-content;
+  height: min-content;
+  grid-row: span 2;
+  grid-column: 2;
+}
+#recpie-modal--container header {
+  width: 100%;
+  padding: 0 75px;
+}
+#recpie-modal--container header h1 {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Lulo Bold";
+  white-space: nowrap;
+}
+#recpie-modal--container h2 {
+  background-color: black;
+  color: white;
+  font-family: "Lulo";
+  padding: 5px 25px;
+  font-size: 22px;
+  text-align: center;
+  align-self: center;
+  margin: 0 65px;
+}
+#recpie-modal--container p {
+  width: 100%;
+  padding: 0 75px;
+  text-align: left;
+  line-height: 2em;
+  font-size: 14px;
+}
+#recpie-modal--container ul {
+  width: 100%;
+  padding: 0;
+}
+#recpie-modal--container li {
+  width: 100%;
+  padding: 0 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 10px;
+  text-align: left;
+}
+#recpie-modal--container li span {
+  padding: 0;
+  margin: 0;
+}
+#recpie-modal--container #recipe--close-btn {
+  width: calc(100% - 150px);
+  padding: 10px 0;
+  margin-bottom: 25px;
 }/*# sourceMappingURL=style.css.map */

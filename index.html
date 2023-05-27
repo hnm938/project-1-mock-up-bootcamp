@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./script.js"></script>
     <link rel="stylesheet" type="text/css" href="./style.css">
-    <title>Document</title>
+    <title>The Drink DB</title>
   </head>
   <body>
     <header>
       <h1>The Drink DB</h1>
     </header>
+    <!-- Search Container -->
     <div id="drink-search-container">
       <label for="drink-search">Search Drinks</label>
       <div style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0 15px">
@@ -19,7 +20,7 @@
         <button onclick="fetchDrink(`s=${document.getElementById('drink-search').value}`)">Search</button>
       </div>
     </div>
-
+    <!-- Drink Categories -->
     <div id="drink-categories">
       <button onclick="fetchDrink('s=coffee')">Caffeinated ☕</button>
       <button onclick="fetchDrink('s=fruit')">Fruity 🍇</button>
@@ -30,13 +31,37 @@
       <button onclick="fetchDrink('s=tea')">Teas 🧋</button>
       <button onclick="fetchDrink('s=sex')">🥵</button>
     </div>
-    
-    <div id="drink-letters-category">
-      
-    </div>
-
+    <!-- Container for letter category buttons  -->
+    <div id="drink-letters-category"></div>
+    <!-- Holds all query results as list items -->
     <div id="drink-list-container">
       <ul id="drink-list"></ul>
-    </div>  
+    </div>
+    <!-- Recipe modal -->
+    <dialog id="recipe-modal">
+      <div id="recpie-modal--container">
+        <header>
+          <h1 id="recipe--drink-name">Gin Fizz</h1>
+        </header>
+        <div id="recipe-grid">
+          <div id="recipe--ingredients">
+            <h2>Ingredients</h2>
+            <ul id="recipe--drink-ingredients"></ul>
+          </div>
+          <div id="recipe--about">
+            <h2>About</h2>
+            <ul id="recipe--drink-info"></ul>
+          </div>
+          <div id="recipe--tags">
+            <h2>tags</h2>
+          </div>
+        </div>
+        <h2 style="width: calc(100% - (75px * 2))">Recipe</h2>
+        <p id="recipe--glass-type" style="margin: 10px 0; font-family: 'Lulo Bold'; text-align: left; width: 100%;"></p>
+        <p id="recipe--instructions" style="margin: 0 0 25px 0">
+        </p>
+        <button id="recipe--close-btn" onclick="this.parentNode.parentNode.close()">Close</button>
+      </div>
+    </dialog>
   </body>
 </html>
