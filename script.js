@@ -208,7 +208,9 @@ async function fetchDrink(query) {
             >I want this!</button>
           </div>
         </li>
-        <hr/>
+        <div class="list-splitter">
+          <img src="./assets/wooden-floor-isolate-png.png" alt="list item splitter hanging shelf"/>
+        </div>
       `;
     })
     .join("");
