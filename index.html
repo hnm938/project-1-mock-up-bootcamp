@@ -10,9 +10,11 @@
   </head>
   <body>
     <div id="drink-search-container">
-      <label for="drink-search">Search for a Drink:</label>
-      <input type="text" name="drink-search" id="drink-search" placeholder="Sex on the Beach 😈"/>
-      <button onclick="fetchDrink(`s=${document.getElementById('drink-search').value}`)">Search</button>
+      <label for="drink-search">Search Drinks</label>
+      <div style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0 15px">
+        <input type="text" name="drink-search" id="drink-search" placeholder="Sex on the Beach 😈"/>
+        <button onclick="fetchDrink(`s=${document.getElementById('drink-search').value}`)">Search</button>
+      </div>
     </div>
 
     <div id="drink-categories">
