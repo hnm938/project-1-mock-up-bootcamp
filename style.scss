@@ -53,7 +53,8 @@ header {
   }
 }
 
-button, input[type=text] {
+button,
+input[type="text"] {
   border: solid black 2px;
   background-color: rgba(245, 245, 245, 0.7);
 
@@ -61,8 +62,10 @@ button, input[type=text] {
 
   cursor: pointer;
   transition: background-color 150ms ease;
-  
-  &:hover { background-color: rgba(245, 245, 245, 0.1); }
+
+  &:hover {
+    background-color: rgba(245, 245, 245, 0.1);
+  }
 }
 
 #title-logo {
@@ -108,15 +111,15 @@ button, input[type=text] {
   button {
     min-width: 10%;
   }
-  input[type=text] {
+  input[type="text"] {
     width: 90%;
     text-align: center;
     font-family: "Lulo Bold";
   }
-  input[type=text]::placeholder {
+  input[type="text"]::placeholder {
     font-family: "Lulo";
   }
-  input[type=text],
+  input[type="text"],
   button {
     height: 50px;
     padding: 5px 10px;
@@ -175,7 +178,7 @@ button, input[type=text] {
   .drink-list--drink {
     height: fit-content;
     max-height: min-content;
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -292,7 +295,8 @@ button, input[type=text] {
   border: solid black 1px;
 
   position: fixed;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   overflow-y: auto;
 
@@ -322,7 +326,7 @@ button, input[type=text] {
       line-height: 30px;
       margin: 0;
     }
-    
+
     img {
       width: calc(100% - (75px * 2));
       height: auto;
@@ -337,13 +341,17 @@ button, input[type=text] {
     width: 100%;
     padding: 0 75px;
     margin-bottom: 35px;
-    h1 { width: fit-content; font-family: "Lulo Bold"; white-space: nowrap; } 
+    h1 {
+      width: fit-content;
+      font-family: "Lulo Bold";
+      white-space: nowrap;
+    }
   }
 
   h2 {
     background-color: black;
     color: white;
-    
+
     font-family: "Lulo";
     padding: 5px 25px;
     font-size: 22px;

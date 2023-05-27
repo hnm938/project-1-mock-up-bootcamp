@@ -47,14 +47,16 @@ header h1 {
   white-space: nowrap;
 }
 
-button, input[type=text] {
+button,
+input[type=text] {
   border: solid black 2px;
   background-color: rgba(245, 245, 245, 0.7);
   font-family: "Lulo";
   cursor: pointer;
   transition: background-color 150ms ease;
 }
-button:hover, input[type=text]:hover {
+button:hover,
+input[type=text]:hover {
   background-color: rgba(245, 245, 245, 0.1);
 }
 
