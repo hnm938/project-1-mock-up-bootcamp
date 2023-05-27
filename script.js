@@ -75,21 +75,28 @@ async function fetchDrink(query) {
       return `
         <li>
           <div class="drink-list--drink">
-            <h1>${drink.strDrink}</h1>
-            <img src="${drink.strDrinkThumb}" alt="drink thumbnail">
-            <ul>
-              <h2>Ingredients</h2>
-              ${drinkIngredients
-                .map((ingredient) => `<li>${ingredient}</li>`)
-                .join("")}
-            </ul>
+            <div style="display: flex; flex-direction: row">
+              <img src="${drink.strDrinkThumb}" alt="drink thumbnail">
+              <div>
+                <h1 class="drink-name">${drink.strDrink}</h1>
+                <ul class="drink-ingredients">
+                  <h2>Ingredients</h2>
+                  ${drinkIngredients
+                    .map((ingredient) => `<li>${ingredient}</li>`)
+                    .join("")}
+                </ul>
+              </div>
+            </div>
             ${
               drink.strVideo != null
                 ? `
-                <h3>Video:</h3>
-                <iframe src="https://www.youtube.com/embed/${
-                  drink.strVideo.split("v=")[1]
-                }" allowfullscreen></iframe>`
+                <div>
+                  <h3>Video</h3>
+                  <iframe src="https://www.youtube.com/embed/${
+                    drink.strVideo.split("v=")[1]
+                  }" allowfullscreen></iframe>
+                </div>
+                `
                 : ""
             }
           </div>

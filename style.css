@@ -1,11 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@font-face {
+  font-family: "Lulo";
+  src: url("./assets/Lulo One.otf") format("opentype");
+}
+@font-face {
+  font-family: "Lulo Outline";
+  src: url("./assets/Lulo Outline.otf");
+}
+@font-face {
+  font-family: "Lulo Bold";
+  src: url("./assets/Lulo OneBold.otf");
+}
+@font-face {
+  font-family: "Lulo Outline Bold";
+  src: url("./assets/Lulo OutlineBold.otf");
+}
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", "Rubik", sans-serif;
+  font-family: "Lulo", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -61,7 +75,6 @@ body h1, body h2, body h3, body h4 {
 #drink-list .drink-list--drink h1, #drink-list .drink-list--drink h2, #drink-list .drink-list--drink h3 {
   padding: 0 150px 5px 150px;
   font-weight: 300;
-  border-bottom: solid black 2px;
 }
 #drink-list .drink-list--drink h1 {
   font-weight: 400;
@@ -70,9 +83,35 @@ body h1, body h2, body h3, body h4 {
   width: 200px;
   aspect-ratio: 1;
 }
+#drink-list .drink-list--drink h3 {
+  text-align: center;
+  border: solid black 2px;
+  border-width: 2px 0 2px 0;
+  padding: 5px 0 !important;
+  font-size: 25px;
+  font-family: "Lulo Bold";
+}
 #drink-list .drink-list--drink iframe {
+  margin-top: 10px;
   width: 600px;
   aspect-ratio: 2;
+  border: solid black 2px;
+}
+#drink-list .drink-list--drink .drink-name {
+  border: none;
+  margin: 0 25px;
+  padding: 0;
+  font-family: "Lulo Bold";
+}
+#drink-list .drink-list--drink .drink-ingredients {
+  margin: 5px 0;
+  line-height: 25px;
+}
+#drink-list .drink-list--drink .drink-ingredients h2 {
+  border: solid black 2px;
+  border-width: 2px 0 2px 0;
+  padding: 10px 0 !important;
+  font-size: 20px;
 }
 #drink-list h2 {
   text-align: left;
