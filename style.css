@@ -35,7 +35,6 @@ body h4 {
 header {
   width: 100%;
   height: 85px;
-  margin-bottom: 50px;
   background-color: black;
   display: flex;
   align-items: center;
@@ -45,6 +44,7 @@ header {
 header h1 {
   font-size: 50px;
   font-family: "Lulo Outline Bold";
+  white-space: nowrap;
 }
 
 button, input[type=text] {
@@ -56,6 +56,23 @@ button, input[type=text] {
 }
 button:hover, input[type=text]:hover {
   background-color: rgba(245, 245, 245, 0.1);
+}
+
+#title-logo {
+  height: 150px;
+  width: auto;
+  aspect-ratio: 1;
+  margin: 25px auto 25px auto;
+  border: solid black 4px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#title-logo img {
+  width: 60%;
+  height: auto;
+  aspect-ratio: 1;
 }
 
 #drink-search-container {
@@ -284,6 +301,7 @@ button:hover, input[type=text]:hover {
 #recpie-modal--container header {
   width: 100%;
   padding: 0 75px;
+  margin-bottom: 35px;
 }
 #recpie-modal--container header h1 {
   width: -moz-fit-content;
