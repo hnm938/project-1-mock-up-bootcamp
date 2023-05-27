@@ -229,33 +229,34 @@ button:hover, input[type=text]:hover {
   align-items: center;
   justify-content: flex-start;
 }
-#recpie-modal--container #recipe-grid {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr fit-content;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  gap: 10px 0;
-}
-#recpie-modal--container #recipe-grid #recipe--ingredients {
+#recpie-modal--container #recipe--ingredients {
   grid-row: 1;
   grid-column: 1;
 }
-#recpie-modal--container #recipe-grid #recipe--about {
-  height: -moz-min-content;
-  height: min-content;
+#recpie-modal--container #recipe--about {
+  height: 1fr;
+  width: -moz-fit-content;
+  width: fit-content;
   grid-row: 2;
-  grid-column: 1;
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-#recpie-modal--container #recipe-grid #recipe--tags {
-  height: -moz-min-content;
-  height: min-content;
-  grid-row: span 2;
-  grid-column: 2;
+#recpie-modal--container #recipe--about li {
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  line-height: 30px;
+  margin: 0;
+}
+#recpie-modal--container #recipe--about img {
+  width: calc(100% - 150px);
+  height: auto;
+  aspect-ratio: 1;
+  margin: 0;
+  border: solid black 1px;
 }
 #recpie-modal--container header {
   width: 100%;

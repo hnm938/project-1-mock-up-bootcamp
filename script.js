@@ -5,7 +5,8 @@ function showRecipe(
   drinkName,
   isAlcoholic,
   drinkCategory,
-  glassType
+  glassType,
+  thumbnail
 ) {
   const modal = document.getElementById("recipe-modal");
   const drinkInfo = document.getElementById("recipe--drink-info");
@@ -26,6 +27,7 @@ function showRecipe(
   modal.querySelector("#recipe--drink-name").innerHTML = drinkName;
   modal.querySelector("#recipe--instructions").innerHTML = instructions;
   modal.querySelector("#recipe--glass-type").innerHTML = `Glass: ${glassType}`;
+  modal.querySelector("#recipe--drink-thumb").src = thumbnail;
 
   // Set drink ingredients
   drinkIngredients.innerHTML = `${ingredients
@@ -164,6 +166,8 @@ async function fetchDrink(query) {
       }
       //#endregion
 
+      console.log(drink);
+
       return `
         <li>
           <div class="drink-list--drink">
@@ -198,7 +202,8 @@ async function fetchDrink(query) {
               '${drink.strDrink}', 
               '${drink.strAlcoholic}',
               '${drink.strCategory}',
-              '${drink.strGlass}'
+              '${drink.strGlass}',
+              '${drink.strDrinkThumb}'
             )"
             >I want this!</button>
           </div>
