@@ -165,6 +165,7 @@ button:hover, input[type=text]:hover {
   line-height: 25px;
 }
 #drink-list .drink-list--drink .drink-ingredients h2 {
+  font-family: "Lulo Outline Bold";
   border: solid black 2px;
   border-width: 2px 0 2px 0;
   padding: 10px 0 !important;
