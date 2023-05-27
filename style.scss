@@ -148,6 +148,9 @@ button, input[type=text] {
   list-style-type: none;
 
   .drink-list--drink {
+    height: fit-content;
+    max-height: min-content;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,8 +168,10 @@ button, input[type=text] {
     }
 
     img {
-      width: 200px;
+      width: auto;
+      height: 250px;
       aspect-ratio: 1;
+      box-shadow: -3px 3px 5px 0 rgba(0, 0, 0, 0.7);
     }
 
     h3 {
@@ -202,6 +207,13 @@ button, input[type=text] {
       }
       line-height: 25px;
     }
+  }
+
+  .recipe-button {
+    margin: 0 0 10px 0;
+    width: 30%;
+    padding: 10px 15px;
+    font-family: "Lulo";
   }
 
   h2 {

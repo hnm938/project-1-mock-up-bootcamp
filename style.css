@@ -136,6 +136,10 @@ button:hover, input[type=text]:hover {
   list-style-type: none;
 }
 #drink-list .drink-list--drink {
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: -moz-min-content;
+  max-height: min-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,8 +156,10 @@ button:hover, input[type=text]:hover {
   font-weight: 400;
 }
 #drink-list .drink-list--drink img {
-  width: 200px;
+  width: auto;
+  height: 250px;
   aspect-ratio: 1;
+  box-shadow: -3px 3px 5px 0 rgba(0, 0, 0, 0.7);
 }
 #drink-list .drink-list--drink h3 {
   text-align: center;
@@ -185,6 +191,12 @@ button:hover, input[type=text]:hover {
   border-width: 2px 0 2px 0;
   padding: 10px 0 !important;
   font-size: 20px;
+}
+#drink-list .recipe-button {
+  margin: 0 0 10px 0;
+  width: 30%;
+  padding: 10px 15px;
+  font-family: "Lulo";
 }
 #drink-list h2 {
   text-align: left;

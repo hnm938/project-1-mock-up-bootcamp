@@ -91,7 +91,7 @@ async function fetchDrink(query) {
               drink.strVideo != null
                 ? `
                 <div>
-                  <h3>Video</h3>
+                  <h3>Drink Video</h3>
                   <iframe src="https://www.youtube.com/embed/${
                     drink.strVideo.split("v=")[1]
                   }" allowfullscreen></iframe>
