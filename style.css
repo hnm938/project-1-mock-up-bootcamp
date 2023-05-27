@@ -186,7 +186,7 @@ button:hover, input[type=text]:hover {
 }
 #drink-list .drink-list--drink .drink-ingredients {
   margin: 5px 0;
-  line-height: 25px;
+  line-height: 30px;
 }
 #drink-list .drink-list--drink .drink-ingredients h2 {
   font-family: "Lulo Outline Bold";
